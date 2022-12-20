@@ -17,7 +17,7 @@ body {
 }
 
 .hero {
-    height: 100vh;
+    height: auto;
     width: 100%;
     background-image: (image here);
     background-size: cover;
@@ -26,17 +26,15 @@ body {
 }
 
 .back-video {
-    position:relative;
-    right: 0;
-    bottom: 0;
-    min-width: auto;
+    display: flex;
+    
     z-index: -1000;
 }
 
 nav {
     display: flex ;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding-top: 10px;
     padding-bottom: 5px;
     padding-left: 2%;
@@ -45,6 +43,19 @@ nav {
     width:100%;
     overflow: hidden;
     border-bottom: 2px solid limegreen;
+}
+
+.burger {
+    display: none;
+}
+
+.burger div {
+    width: 24px;
+    height: 3px;
+    color: #32cd32;
+    margin: 5px;
+    background-color: #32cd32;
+    border-radius: 4px;
 }
 
 nav img {
@@ -67,14 +78,13 @@ span {
 
 nav ul li {
     list-style-type: none;
-    display: inline-block;
-    padding: 10px 25px;
+    display: inline-flex;
+    padding: 10px 45px;
 }
 
 nav ul li a{
     float: left;
-    display: inline;
-
+    display:inline-flex;
     color: var(--grey) ;
     text-decoration: none;
     font-size:large;
@@ -474,7 +484,19 @@ h5 {
 }}
 
 @media (max-width: 1140px) {
-    .main {
+    nav {
+        padding-left: 6px;
+        padding-right: 6px;
+}   nav ul li {
+        padding: 10px
+}   .btn {
+    transform: scale(0.8,0.8);
+}   .back-video {
+    width: 1140px;
+    height: auto
+}   .content {
+    top: 40%;
+}    .main {
         align-items: center;
         flex-direction: column;
         text-align: center;
@@ -495,10 +517,6 @@ h5 {
     margin-bottom: 20px;
 }}
 
-@media (max-width: 855px) {
-    nav ul li {
-        transform: scale(0.9,0.9);
-        padding: 10px;
-        justify-content: space-around;
-    }
+@media (max-width: 450px) {
+
 }
