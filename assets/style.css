@@ -579,21 +579,121 @@ h5 {
         transform: scale(1,1);
 }
     .hero {
-        height:310px
+        height:300px
 }
     .back-video {
-    width: 150%;
+    width: 100%;
+    transform: scaleY(1.4);
 }
     .content {
+        left: 4%;
         position: absolute;
         top:70px;
         width: 350px;
-        transform: scaleY(.9)       
+        transform: scaleY(.8)       
 }
     h1 {
-    font-size:xx-large;
+    margin: 15px 0px 15px;
+    font-size:25px;
+    }
+
+    h3 {
+    font-size: 15px;
+    }
+
+    h4 {
+    font-size: 15px;
+    padding-top: 25px;
+    }
+
+    .newslatter form input:first-child {
+        height: 32px;
+        width: 80%;
     }
 
     .newslatter form input:last-child {
-        margin-left: -80px
+        height: 32px;
+        margin-left: -85px;
+        padding-top: 5px;
+        padding-bottom: 9px;
+        padding-right: 7px;
+        padding-left: 7px;
+        font-size: 14px;
+        -webkit-text-stroke-width: .2px;
+        -webkit-text-stroke-color: black;
     }
+
+    .about {
+        padding-top:40px;
+        padding-bottom: 20px
+    }
+
+    .about img {
+        height: 200px;
+        width: 180px;
+    }
+
+    .about-text h2 {
+        font-size: 40px;
+    }
+
+    .about p {
+        margin-right:10px;
+        margin-left:10px;
+        padding:0;
+        margin-bottom: 60px;
+    }
+
+    .skills h2 {
+        padding-top: 45px;
+        border-top: 2px solid limegreen;
+    }
+
+    div.html5 {
+        margin-left:-60px;
+    }
+
+    div.css {
+        margin-left:-75px;
+    }
+
+    div.js {
+        margin-left:-30px;
+    }
+
+
+    div.python {
+        margin-left:-50px;
+    }
+
+    .title h2 {
+        font-size: 40px;
+        display: inline;
+        margin: 0px;
+        padding-top:50px;
+    }
+
+    .projects {
+        height: 1550px;
+        text-align: center;
+        padding:70px;
+    }
+
+    div.box {
+        
+        transform: scale(0.9,0.9);
+    }
+
+    .card .button {
+        -webkit-text-stroke-width: .3px;
+        -webkit-text-stroke-color: black;
+    }
+
+    .contact h4 {
+        font-size: 25px;
+    }
+
+    .links {
+        transform: scale(0.8,0.8);
+    }
+}
