@@ -26,10 +26,8 @@ body {
 }
 
 .back-video {
-    .back-video {
     position: absolute;
     z-index: -100;
-}
 }
 
 nav {
@@ -568,7 +566,6 @@ h5 {
         height:310px
 }   .back-video {
     width: 100%;
-    background-attachment:initial;
 }   .content {
     transform: scale(0.8,0.5);
     position: absolute;
