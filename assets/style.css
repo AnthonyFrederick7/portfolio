@@ -25,6 +25,19 @@ body {
     background-position: center;
 }
 
+.checkbtn {
+    font-size: 30px;
+    color: #d6d6d6;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+#check {
+    display: none;
+}
+
 .back-video {
     position: absolute;
     z-index: -100;
@@ -34,19 +47,6 @@ nav {
     height: 80px;
     background: black;
     border-bottom: 2px limegreen solid;
-}
-
-
-
-label #btn,
-label #cancel {
-    color: #d6d6d6;
-    font-size: 30px;
-    float: right;
-    line-height: 80px;
-    margin-right: 40px;
-    cursor:pointer;
-    display: none;
 }
 
 #check {
@@ -91,7 +91,7 @@ nav ul {
 }
 
 nav ul li {
-    display:inline-block;
+    display:inline-flex;
     line-height: 80px;
     margin-right: 60px;
     text-decoration: none;
@@ -99,7 +99,6 @@ nav ul li {
 }
 
 nav ul li a {
-    padding:;
     text-decoration: none;
     position: relative;
     color: #d6d6d6;
@@ -541,38 +540,60 @@ h5 {
 }}
 
 @media screen and (max-width: 450px) {
-    label #btn {
-        display: block;
-}   nav ul { 
-    margin-right: 0px;
-}   ul {
-    position: fixed;
-    width: 25%;
-    height:105px;
-    background: black;
-    top: 65px;
-    padding-right: 0px;
-    right: 0;
-    text-align: center;
-}   nav ul li {
-    display: block;
-    margin: 25px 0;
-    line-height: 30px;
-}   nav ul li a {
-    transform:scale(0.8,0.8);
+    nav img {
+        width: 100px;
+        margin-top: 10px;
 }
+    .checkbtn {
+        display: block;
+}
+    ul { 
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: black;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .4s;
+    }
 
+    nav ul li {
+        display: block;
+    }
+    
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    #checked:checked ~ ul {
+        left:0;
+
+    }
+
+
+    .btn {
+        float: right;
+        border-bottom-right-radius: 0px;
+        border-top-right-radius: 0px;
+        transform: scale(1,1);
+}
     .hero {
         height:310px
-}   .back-video {
-    width: 100%;
-}   .content {
-    transform: scale(0.8,0.5);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-
-
 }
+    .back-video {
+    width: 150%;
 }
+    .content {
+        position: absolute;
+        top:70px;
+        width: 350px;
+        transform: scaleY(.9)       
+}
+    h1 {
+    font-size:xx-large;
+    }
+
+    .newslatter form input:last-child {
+        margin-left: -80px
+    }
