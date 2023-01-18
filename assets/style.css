@@ -14,20 +14,31 @@
 
 body {
     height: 100%;
-    width: 100%;
+    width: 100vw;
+}
+
+.checkbtn {
+    display:none;
+    font-size: 30px;
+    color: #d6d6d6;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+#check {
+    display: none;
 }
 
 .hero {
-    height: 955px;
-    width: 100%;
-    background-image: (image here);
-    background-size: cover;
-    background-position: center;
+    height: 100vh;
+    width: 100px;
 }
 
 .back-video {
-    position: absolute;
-    z-index: -100;
+        position: absolute;
+        z-index: -100;
 }
 
 nav {
@@ -36,24 +47,12 @@ nav {
     border-bottom: 2px limegreen solid;
 }
 
-
-
-label #btn,
-label #cancel {
-    color: #d6d6d6;
-    font-size: 30px;
-    float: right;
-    line-height: 80px;
-    margin-right: 40px;
-    cursor:pointer;
-    display: none;
-}
-
 #check {
     display: none;
 }
 
 .burger div {
+    display:none;
     width: 24px;
     height: 3px;
     color: #32cd32;
@@ -62,12 +61,12 @@ label #cancel {
     border-radius: 4px;
 }
 
-nav img {
+#nav-img {
     position: absolute;
     height: 45px;
-    width: 220px;
+    width: 400px;
     top: 17px;
-    left: 3%;
+    left: 1%;
 }
 
 .logo {
@@ -84,14 +83,14 @@ span {
 
 nav ul {
     float: right;
-    margin-right: 20px;
+    margin-right: 26px;
     font-weight: bold;
     text-transform: capitalize;
     text-shadow: black 4px 4px 4px;
 }
 
 nav ul li {
-    display:inline-block;
+    display:inline-flex;
     line-height: 80px;
     margin-right: 60px;
     text-decoration: none;
@@ -99,7 +98,6 @@ nav ul li {
 }
 
 nav ul li a {
-    padding:;
     text-decoration: none;
     position: relative;
     color: #d6d6d6;
@@ -196,7 +194,7 @@ h4 {
 }  
 
 .about {
-    width: auto;
+    width: 100vw;
     padding-top: 300px;
     padding-bottom: 166px;
     background-color: black;
@@ -218,7 +216,7 @@ h4 {
 }
 
 .main {
-    width: auto;
+    width: 100vw;
     display: flex;
     margin: 0 auto;
     justify-content:space-around;
@@ -286,7 +284,7 @@ div .skills {
 
 .projects {
     background: black;
-    width: 100%;
+    width: 100vw;
     padding: 100px;
 }
 
@@ -309,6 +307,9 @@ div .skills {
 }
 
 .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     height: 450px;
     width: 335px;
     background: rgb(29, 29, 29);
@@ -319,31 +320,22 @@ div .skills {
     text-align: center;
 }
 
-.card i {
-    font-size: 50px;
-    text-shadow: 1px 1px grey;
-    display: block;
-    text-align: center;
-    margin: 10px 0px;
-}
-
-h5 {
+.projects-head {
     font-size: 23px;
-    margin-bottom: 10px;
-    margin-top: 10px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #32cd32;
 }
-
-.card img {
-}
-
 .para p {
     font-size: 16px;
     font-weight: bold;
     line-height: 27px;
-    margin-bottom: 100px;
+    padding-left: 2%;
+    padding-right: 2%;
+    height: 100%;
 }
 
 .card .button {
+    
     background-color: #32cd32;
     color: #d6d6d6;
     text-shadow: black 1px 1px 3px;
@@ -378,15 +370,23 @@ h5 {
     padding-top: 8px;
 }
 
-
-
-.links {
+img {
+    height: 170px;
     width: 100%;
-    display: inline;
-    justify-content: space-between;
+    padding-left: 3%;
+    padding-right: 3%;
 }
 
-.email {
+#NDNC {
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    width: 100%;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+/*.email {
     border-radius: 10px;
     padding: 2px;
     color: black;
@@ -459,7 +459,45 @@ h5 {
     background: black;
     transform: scale(1.2);
     transition: .2s;
-}
+}*/
+.links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+  }
+  .email,
+  .twitter,
+  .github,
+  .facebook,
+  .linkedin {
+        color: rgb(255, 255, 255);
+        font-size: larger;
+        font-weight: 600;
+        border-radius: 10px;
+        margin-right: 20px;
+        padding: 6px;
+        padding-left: 10px;
+        padding-right: 10px;
+        background: linear-gradient(1deg,#000,#292929);
+        border: 1.5px solid #32cd32;
+  }
+  .twitter {
+    animation-delay: 0.7s;
+  }
+  .facebook {
+    animation-delay: 0.7s;
+  }
+  .github {
+    animation-delay: 0.7s;
+  }
+  .linkedin {
+    animation-delay: 0.7s;
+  }
+  .email {
+    animation-delay: 0.7s;
+  }
+
 
 @media (max-width: 1620px) {
     .about img {
@@ -541,38 +579,160 @@ h5 {
 }}
 
 @media screen and (max-width: 450px) {
-    label #btn {
+    #nav-img {
+        width: 100px;
+        padding-bottom: 10px;
+}
+    .checkbtn {
+        margin-right:7%;
         display: block;
-}   nav ul { 
-    margin-right: 0px;
-}   ul {
-    position: fixed;
-    width: 25%;
-    height:105px;
-    background: black;
-    top: 65px;
-    padding-right: 0px;
-    right: 0;
-    text-align: center;
-}   nav ul li {
-    display: block;
-    margin: 25px 0;
-    line-height: 30px;
-}   nav ul li a {
-    transform:scale(0.8,0.8);
 }
+    ul { 
+        position: fixed;
+        width: 100vw;
+        background: black;
+        top: 80px;
+        left: -120%;
+        text-align: center;
+        transition: all .4s;
+    }
 
+    nav ul li {
+        display: block;
+    }
+    
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    #checked:checked ~ ul {
+        left:0;
+
+    }
+
+
+    .btn {
+        float: right;
+        border-bottom-right-radius: 0px;
+        border-top-right-radius: 0px;
+        transform: scale(1,1);
+}
     .hero {
-        height:310px
-}   .back-video {
-    width: 100%;
-}   .content {
-    transform: scale(0.8,0.5);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-
-
+        height: 375px;
 }
+    .back-video {
+    width: 100vw;
+    transform: scale(2.1,2.1);
+}
+    .content {
+        left: 4%;
+        position: absolute;
+        top:140px;
+        width: 350px;
+        transform: scaleY(.8)       
+}
+    h1 {
+    margin: 15px 0px 15px;
+    font-size:25px;
+    }
+
+    h3 {
+    font-size: 15px;
+    }
+
+    h4 {
+    font-size: 15px;
+    padding-top: 25px;
+    }
+
+    .newslatter form input:first-child {
+        height: 32px;
+        width: 80%;
+    }
+
+    .newslatter form input:last-child {
+        height: 32px;
+        margin-left: -85px;
+        padding-top: 5px;
+        padding-bottom: 9px;
+        padding-right: 7px;
+        padding-left: 7px;
+        font-size: 14px;
+        -webkit-text-stroke-width: .2px;
+        -webkit-text-stroke-color: black;
+    }
+
+    .about {
+        padding-top:40px;
+        padding-bottom: 20px
+    }
+
+    .about img {
+        height: 200px;
+        width: 180px;
+    }
+
+    .about-text h2 {
+        font-size: 40px;
+    }
+
+    .about p {
+        margin-right:10px;
+        margin-left:10px;
+        padding:0;
+        margin-bottom: 60px;
+    }
+
+    .skills h2 {
+        padding-top: 45px;
+        border-top: 2px solid limegreen;
+    }
+
+    div.html5 {
+        margin-left:-60px;
+    }
+
+    div.css {
+        margin-left:-75px;
+    }
+
+    div.js {
+        margin-left:-30px;
+    }
+
+
+    div.python {
+        margin-left:-50px;
+    }
+
+    .title h2 {
+        font-size: 40px;
+        display: inline;
+        margin: 0px;
+        padding-top:50px;
+    }
+
+    .projects {
+        height: 1550px;
+        text-align: center;
+        padding:70px;
+    }
+
+    div.box {
+        
+        transform: scale(0.9,0.9);
+    }
+
+    .card .button {
+        -webkit-text-stroke-width: .3px;
+        -webkit-text-stroke-color: black;
+    }
+
+    .contact h4 {
+        font-size: 25px;
+    }
+
+    .links {
+        transform: scale(0.8,0.8);
+    }
 }
