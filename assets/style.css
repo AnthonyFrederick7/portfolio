@@ -624,7 +624,6 @@ img {
 }
     .back-video {
     width: 100vw;
-    transform: scale(2.9,2.9);
 }
     .content {
         left: 4%;
